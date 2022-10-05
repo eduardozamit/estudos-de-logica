@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de programação Javascript</title>
+    </head>
+    <body>
+        <h1>Lógica de programação Javascript</h1>
+    </body>
+
+    <script>
+
+        var jogador1 = parseInt(prompt("Digite um número jogador 1: "));
+
+        var jogador2 = parseInt(prompt("Digite um número jogador 2: "));
+
+        var numeroSorteado = parseInt(Math.random() * 2);
+
+        var numeroMaior
+        var numeroMenor
+
+        if (jogador1 > jogador2) {
+            var numeroMaior = jogador1
+            var numeroMenor = jogador2
+        } else {
+            var numeroMaior = jogador2
+            var numeroMenor = jogador1
+        }
+
+        if (jogador1 == jogador2) {
+            alert("Os jogadores empataram!");
+        } else if (numeroSorteado == 1) {
+            alert("O numero vencedor é: " + numeroMaior)
+        } else {
+            alert("O numero vencedor é: " + numeroMenor)
+        }
+
+    </script>
+</html>

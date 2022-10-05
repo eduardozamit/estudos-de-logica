@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de programação Javascript</title>
+    </head>
+    <body>
+        <h1>Lógica de programação Javascript</h1>
+    </body>
+
+    <script>
+
+        var n1 = prompt("Digite um numero: ");
+        n1 = parseFloat(n1);
+
+        var n2 = prompt("Digite outro numero: ");
+        n2 = parseFloat(n2);
+
+        var restoDaDivisao = n1 % n2;
+
+        var parOuImpar
+
+        if (restoDaDivisao == 0) {
+            var parOuImpar = "Par"
+        } else {
+            var parOuImpar = "Impar"
+        }
+
+        alert("O resto da divisão de " + n1 + " por " + n2 + " é: " + restoDaDivisao + " (" + parOuImpar + ")")
+
+    </script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de programação Javascript</title>
+    </head>
+    <body>
+        <h1>Lógica de programação Javascript</h1>
+
+        <button onclick="adicionar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="dividir()">/</button>
+
+        <div id="output"></div>
+
+        <script>
+            function adicionar() {
+                var calc = prompt("Escolha um número para a adição");
+                calc = parseFloat(calc);
+
+                numero = numero + calc
+
+                output.innerHTML = numero
+            }
+
+            function subtrair() {
+                var calc = prompt("Escolha um número para a subtração");
+                calc = parseFloat(calc);
+
+                numero = numero - calc
+
+                output.innerHTML = numero
+            }
+
+            function multiplicar() {
+                var calc = prompt("Escolha um número para a multiplicação");
+                calc = parseFloat(calc);
+
+                numero = numero * calc
+
+                output.innerHTML = numero
+            }
+
+            function dividir() {
+                var calc = prompt("Escolha um número para a divisão");
+                calc = parseFloat(calc);
+
+                numero = numero / calc
+
+                output.innerHTML = numero
+            }
+
+            var numero = prompt("Escolha um número");
+            numero = parseFloat(numero);
+
+            var output = document.querySelector("#output");
+
+            output.innerHTML = numero
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lógica de programação Javascript</title>
+    </head>
+    <body>
+        <h1>Lógica de programação Javascript</h1>
+
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            function escreve(mensagem) {
+                var output = document.querySelector("#output");
+                output.innerHTML = mensagem;
+            }
+
+
+            function calcular(symbol, n1, n2) {
+
+                if ( symbol !== "+" || symbol !== "-" || symbol !== "*" || symbol !== "/" ) {
+                    alert("Digite um simbolo válido")
+                    return 0;
+                }
+
+                if ( isNaN(n1) || isNaN(n2) ) {
+                    alert("Chama passando somente números")
+                    return 0;
+                }
+
+                var numeroCalculado = null;
+
+                switch(symbol) {
+                    case "+":
+                        numeroCalculado = n1 + n2
+                        break;
+                    case "-":   
+                        numeroCalculado = n1 - n2
+                        break;
+                    case "*":
+                        numeroCalculado = n1 * n2
+                        break;
+                    case "/":
+                        numeroCalculado = n1 / n2
+                }
+
+                return numeroCalculado;
+            }
+
+            var numero = prompt("Escolha um número");
+            numero = parseFloat(numero);
+
+            escreve(numero);
+
+            function iniciarCalculo(symbol) {
+                var n1 = document.querySelector("#output").textContent;
+                n1 = parseFloat(n1);
+
+                var n2 = prompt("Digite outro número");
+                n2 = parseFloat(n2);
+
+                var msg = calcular(symbol, n1, n2)
+
+                escreve(msg);
+            }
+
+        </script>
+    </body>
+</html>
